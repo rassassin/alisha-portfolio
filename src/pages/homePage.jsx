@@ -10,7 +10,7 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "0 16px",
+    padding: "0 20px",
   },
   nameContainer: {
     height: "100vh",
@@ -29,6 +29,19 @@ const styles = {
     left: "50%",
     animation: "bounce 2s infinite",
     cursor: "pointer",
+  },
+  alishaDescriptionTextContainer: {
+    height: "100vh",
+    width: "100vw",
+    backgroundColor: "blue",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  videoText: {
+    fontSize: "1.6rem",
+    margin: 0,
   },
 };
 
@@ -70,7 +83,12 @@ const HomePage = () => {
         </svg>
       </div>
 
-      <div style={{ height: "100vh", backgroundColor: "green" }}></div>
+      <div style={{ height: "100vh", backgroundColor: "green" }}>
+        <div style={styles.alishaDescriptionTextContainer}>
+          <h2 style={styles.videoText}>I'm a creative bitch, i love creative shit</h2>
+          <h2 style={styles.videoText}>I'm a creative bitch</h2>
+        </div>
+      </div>
       <div style={{ height: "100vh", backgroundColor: "purple" }}></div>
     </>
   );
