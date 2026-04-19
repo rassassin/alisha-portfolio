@@ -1,3 +1,5 @@
+import PortfolioGallery from "../components/gallery";
+
 const styles = {
   navbarContainer: {
     position: "absolute",
@@ -26,7 +28,7 @@ const styles = {
   arrowContainer: {
     position: "absolute",
     bottom: 20,
-    left: "50%",
+    right: "0%",
     animation: "bounce 2s infinite",
     cursor: "pointer",
   },
@@ -42,6 +44,21 @@ const styles = {
   videoText: {
     fontSize: "1.6rem",
     margin: 0,
+  },
+  contactMeContainer: {
+    display: "flex",
+    flexDirection: "column",
+    height: "100%",
+    padding: "2.7rem",
+    overflow: "hidden",
+  },
+  contactMeHeaderContainer: {
+    flex: 1,
+  },
+  contactInformationContainer: {
+    flex: 4,
+    display: "flex",
+    height: "100%",
   },
 };
 
@@ -82,14 +99,17 @@ const HomePage = () => {
           <path d="M7 13l5 5 5-5" />
         </svg>
       </div>
-
       <div style={{ height: "100vh", backgroundColor: "green" }}>
         <div style={styles.alishaDescriptionTextContainer}>
-          <h2 style={styles.videoText}>I'm a creative bitch, i love creative shit</h2>
-          <h2 style={styles.videoText}>I'm a creative bitch</h2>
+          <h2 style={styles.videoText}>I'm a creative fellow, i love creative shit</h2>
+          <h2 style={styles.videoText}>I'm a creative fella</h2>
         </div>
       </div>
-      <div style={{ height: "100vh", backgroundColor: "purple" }}></div>
+      <div style={{ height: "100vh", overflow: "hidden" }}>
+        <div style={styles.contactMeContainer}>
+          <PortfolioGallery />
+        </div>
+      </div>
     </>
   );
 };
